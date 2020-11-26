@@ -1,5 +1,5 @@
 .menu{
-    width: 25vw;
+    width: 20vw;
     height: 100vh;
     position: absolute;
     z-index: 50;
@@ -16,8 +16,8 @@
     width: 100%;
     height: 20%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
     border: var(--border2);
 }
@@ -25,6 +25,7 @@
 .cont-logo__logo{
     font-size: 3vw;
     font-weight: bold;
+    margin-left: 10%;
 }
 
 .cont-logo__logo--light{
@@ -48,13 +49,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 25%;
+    padding-left: 10%;
     overflow: hidden;
     border: var(--border2);
 }
 
 .link__ico{
-    width: 10%;
+    width: 9%;
     margin-right: 5%;
 }
 
@@ -65,6 +66,18 @@
 .menu__cont-copy{
     width: 100%;
     height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     overflow: hidden;
     border: var(--border2);
+}
+
+.cont-copy__text{
+    font-size: 0.75vw;
+    margin-left: 10%;
+}
+
+.cont-copy__text--light{
+    color: var(--color-letra2-light);
 }
