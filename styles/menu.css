@@ -1,0 +1,13 @@
+.menu{
+    width: 25vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+}
+
+.menu--light{
+    background-color: var(--color-fondo-light);
+    border: var(--border2);
+}

@@ -10,5 +10,13 @@
 :root{
     --border: 1px solid white; /*Bordes guia*/
     --border2: 1px solid black; /*Bordes guia*/
+    --color-fondo-light: #ffffff;
+    --color-letra-light: #000000;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
