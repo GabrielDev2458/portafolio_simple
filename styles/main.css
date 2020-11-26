@@ -1,0 +1,14 @@
+/* Quitar margen y padding predeterminado */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Declaracion de variables css */
+:root{
+    --border: 1px solid white; /*Bordes guia*/
+    --border2: 1px solid black; /*Bordes guia*/
+}
+
