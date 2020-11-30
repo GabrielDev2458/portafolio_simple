@@ -1,18 +1,22 @@
 .settings-gear{
-    width: 3vw;
-    height: 3vw;
+    width: 2.5vw;
+    height: 2.5vw;
     position: absolute;
     z-index: 50;
-    top: 5vh;
+    top: 4vh;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 3px;
-    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+    border: 1px solid rgb(173, 173, 173);
+    background-color: #ffffff;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.settings-gear--show{
+    transform: translate(-400%,0);
 }
 
 .settings-gear > img{
@@ -20,5 +24,95 @@
 }
 
 .settings-panel{
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    z-index: 40;
+    top: 4vh;
+    right: -10vw;
+    border-radius: 3px;
+    border: 1px solid rgb(173, 173, 173);
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
 
+.settings-panel--show{
+    transform: translate(-100%,0);
+}
+
+.settings-panel__title1{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-panel__colors{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.colors_color{
+    width: 20%;
+    height: 80%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#color1{
+    background-color: var(--color-resalt-origin);
+}
+
+#color2{
+    background-color: var(--color-resalt-second);
+}
+
+#color3{
+    background-color: var(--color-resalt-third);
+}
+
+#color4{
+    background-color: var(--color-resalt-fourth);
+}
+
+.settings-panel__title2{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-panel__skin{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skin__light{
+    width: 39%;
+    height: 60%;
+    font-size: 0.9vw;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.skin__dark{
+    width: 39%;
+    height: 60%;
+    color: #ffffff;
+    font-size: 0.9vw;
+    font-weight: bold;
+    background-color: #000000;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }

@@ -10,10 +10,17 @@
 :root{
     --border: 1px solid white; /*Bordes guia*/
     --border2: 1px solid black; /*Bordes guia*/
-    --color-fondo-light: #ffffff;
+    --color-body-dark: #0e0e0e;
+    --color-body-light: #f0f0fc;
+    --color-menu-light: #ffffff;
+    --color-menu-dark: #222222;
     --color-letra-light: #000000;
+    --color-letra-dark: #ffffff;
     --color-letra2-light: #535353;
     --color-resalt-origin: #941544;
+    --color-resalt-second: #2626a7;
+    --color-resalt-third: #e9e035;
+    --color-resalt-fourth: #44c525;
 }
 
 body{
@@ -21,4 +28,13 @@ body{
     height: 100vh;
     position: relative;
     overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.body--light{
+    background-color: var(--color-body-light);
+}
+
+.body--dark{
+    background-color: var(--color-body-dark);
 }
