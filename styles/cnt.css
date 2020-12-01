@@ -1,0 +1,11 @@
+.cnt{
+    width: 80vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 40;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: violet;
+}
