@@ -4,8 +4,13 @@
     position: absolute;
     z-index: 40;
     top: 0;
-    right: 0;
+    right: -80vw;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: tomato;
+    background-color: var(--color-body-light);
+    transition: transform 0.3s ease;
+}
+
+.portfolio--show{
+    transform: translate(-100%,0%);
 }

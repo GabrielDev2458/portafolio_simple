@@ -5,7 +5,7 @@ let butt_light = document.getElementsByClassName("skin__light")[0];
 let butt_dark = document.getElementsByClassName("skin__dark")[0];
 
 
-const  show_settings = ()=>{
+const show_settings = ()=>{
     gear.classList.toggle("settings-gear--show");
     panel.classList.toggle("settings-panel--show");
 };
