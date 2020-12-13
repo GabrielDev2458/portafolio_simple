@@ -4,12 +4,84 @@ let colors = document.querySelectorAll(".colors_color");
 let butt_light = document.getElementsByClassName("skin__light")[0];
 let butt_dark = document.getElementsByClassName("skin__dark")[0];
 
-
+//mostrar el panel de control
 const show_settings = ()=>{
     gear.classList.toggle("settings-gear--show");
     panel.classList.toggle("settings-panel--show");
 };
 
+//Cambiar los color del logo
+const set_logo_style = (color) => {
+
+    let logo = document.getElementsByClassName("cont-logo__logo")[0].children[0];
+
+    if(color === "color1"){
+        logo.classList.add("logo__resalt--origin");
+        logo.classList.remove("logo__resalt--second");
+        logo.classList.remove("logo__resalt--third");
+        logo.classList.remove("logo__resalt--fourth");
+    }else if(color === "color2"){
+        logo.classList.remove("logo__resalt--origin");
+        logo.classList.add("logo__resalt--second");
+        logo.classList.remove("logo__resalt--third");
+        logo.classList.remove("logo__resalt--fourth");
+    }else if(color === "color3"){
+        logo.classList.remove("logo__resalt--origin");
+        logo.classList.remove("logo__resalt--second");
+        logo.classList.add("logo__resalt--third");
+        logo.classList.remove("logo__resalt--fourth");
+    }else if(color === "color4"){
+        logo.classList.remove("logo__resalt--origin");
+        logo.classList.remove("logo__resalt--second");
+        logo.classList.remove("logo__resalt--third");
+        logo.classList.add("logo__resalt--fourth");
+    }
+
+};
+
+//Cambiar los colores de textos, botones, etc.. del menu
+const set_menu_style = (color) => {
+
+    let links = document.querySelectorAll(".link__text");
+
+    console.log(links);
+
+    links.forEach(link => {
+        link.classList.remove("link__text--origin");
+        link.classList.remove("link__text--second");
+        link.classList.remove("link__text--third");
+        link.classList.remove("link__text--fourth");
+    });
+
+    if(color === "color1"){
+
+        links.forEach(link => {
+            link.classList.add("link__text--origin");
+        });
+
+    }else if(color === "color2"){
+
+        links.forEach(link => {
+            link.classList.add("link__text--second");
+        });
+
+    }else if(color === "color3"){
+
+        links.forEach(link => {
+            link.classList.add("link__text--third");
+        });
+
+    }else if(color === "color4"){
+
+        links.forEach(link => {
+            link.classList.add("link__text--fourth");
+        });
+
+    }
+
+};
+
+//Cambiar los colores de textos, botones, etc.. del home
 const set_home_style = (color) =>{
 
     let home_position_resalt = document.getElementsByClassName("position-resalt")[0];
@@ -80,92 +152,45 @@ const set_home_style = (color) =>{
 
 }
 
-const set_logo_style = (color) => {
+//Cambiar los colores de textos, botones, etc.. de la seccion conocimientos
+const set_skills_style = (color) =>{
 
-    let logo = document.getElementsByClassName("cont-logo__logo")[0].children[0];
-
-    if(color === "color1"){
-        logo.classList.add("logo__resalt--origin");
-        logo.classList.remove("logo__resalt--second");
-        logo.classList.remove("logo__resalt--third");
-        logo.classList.remove("logo__resalt--fourth");
-    }else if(color === "color2"){
-        logo.classList.remove("logo__resalt--origin");
-        logo.classList.add("logo__resalt--second");
-        logo.classList.remove("logo__resalt--third");
-        logo.classList.remove("logo__resalt--fourth");
-    }else if(color === "color3"){
-        logo.classList.remove("logo__resalt--origin");
-        logo.classList.remove("logo__resalt--second");
-        logo.classList.add("logo__resalt--third");
-        logo.classList.remove("logo__resalt--fourth");
-    }else if(color === "color4"){
-        logo.classList.remove("logo__resalt--origin");
-        logo.classList.remove("logo__resalt--second");
-        logo.classList.remove("logo__resalt--third");
-        logo.classList.add("logo__resalt--fourth");
-    }
-
-};
-
-const set_menu_style = (color) => {
-
-    let links = document.querySelectorAll(".link__text");
-
-    console.log(links);
-
-    links.forEach(link => {
-        link.classList.remove("link__text--origin");
-        link.classList.remove("link__text--second");
-        link.classList.remove("link__text--third");
-        link.classList.remove("link__text--fourth");
-    });
+    let skills_titulo = document.getElementsByClassName("cont-tittle__tittle")[0];
 
     if(color === "color1"){
 
-        links.forEach(link => {
-            link.classList.add("link__text--origin");
-        });
-
     }else if(color === "color2"){
 
-        links.forEach(link => {
-            link.classList.add("link__text--second");
-        });
-
     }else if(color === "color3"){
-
-        links.forEach(link => {
-            link.classList.add("link__text--third");
-        });
-
+        
     }else if(color === "color4"){
-
-        links.forEach(link => {
-            link.classList.add("link__text--fourth");
-        });
-
+        
     }
+    
+}
 
-};
-
+//Cambiar los colores de textos, botones, etc.. en general
 const set_style = (color) =>{
     if(color.id === "color1"){
         set_logo_style("color1");
         set_menu_style("color1");
         set_home_style("color1");
+        set_skills_style("color1");
     }else if(color.id === "color2"){
         set_logo_style("color2");
         set_menu_style("color2");
         set_home_style("color2");
+        set_skills_style("color1");
     }else if(color.id === "color3"){
         set_logo_style("color3");
         set_menu_style("color3");
         set_home_style("color3");
+        set_skills_style("color1");
     }else if(color.id === "color4"){
         set_logo_style("color4");
         set_menu_style("color4");
         set_home_style("color4");
+        set_skills_style("color1");
     }
 }
 
@@ -222,6 +247,7 @@ const set_icon_color = (skin_color) =>{
 
 }
 
+//Cambiar el tema de la pagina Dark/Light
 const set_body = (skin_color) =>{
     let body = document.getElementsByTagName("body")[0];
     let menu = document.getElementsByClassName("menu")[0];
@@ -294,7 +320,9 @@ const set_body = (skin_color) =>{
     }
 }
 
-gear.addEventListener("click", e => {
+////////Eventos que disparan las funciones
+
+gear.addEventListener("click", e => { 
     show_settings();
 });
 
