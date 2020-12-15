@@ -10,7 +10,7 @@ const show_settings = ()=>{
     panel.classList.toggle("settings-panel--show");
 };
 
-//Cambiar los color del logo
+//Cambiar el color del logo
 const set_logo_style = (color) => {
 
     let logo = document.getElementsByClassName("cont-logo__logo")[0].children[0];
@@ -155,18 +155,180 @@ const set_home_style = (color) =>{
 //Cambiar los colores de textos, botones, etc.. de la seccion conocimientos
 const set_skills_style = (color) =>{
 
-    let skills_titulo = document.getElementsByClassName("cont-tittle__tittle")[0];
+    //titulo de la seccion
+    let skills_tittle = document.getElementsByClassName("cont-tittle__tittle")[0];
+
+    //marcadores de color
+    let skills_marks = document.querySelectorAll(".skills__cont-name");
+
+    //titulos de las tarjetas
+    let skills_tit_card = document.querySelectorAll(".cont-text__tittle");
+
+    //lineas divisorias
+    let skills_lines = document.querySelectorAll(".cont-text__line");
+
+    skills_tittle.classList.remove("cont-tittle__tittle--origin");
+    skills_tittle.classList.remove("cont-tittle__tittle--second");
+    skills_tittle.classList.remove("cont-tittle__tittle--third");
+    skills_tittle.classList.remove("cont-tittle__tittle--fourth");
+
+    skills_marks.forEach(mark =>{
+        mark.classList.remove("skills__cont-name--origin");
+        mark.classList.remove("skills__cont-name--second");
+        mark.classList.remove("skills__cont-name--third");
+        mark.classList.remove("skills__cont-name--fourth");
+    });
+
+    skills_tit_card.forEach(titc =>{
+        titc.classList.remove("cont-text__tittle--origin");
+        titc.classList.remove("cont-text__tittle--second");
+        titc.classList.remove("cont-text__tittle--third");
+        titc.classList.remove("cont-text__tittle--fourth");
+    });
+
+    skills_lines.forEach(line =>{
+        line.classList.remove("cont-text__line--origin");
+        line.classList.remove("cont-text__line--second");
+        line.classList.remove("cont-text__line--third");
+        line.classList.remove("cont-text__line--fourth");
+    });
 
     if(color === "color1"){
 
+        skills_tittle.classList.add("cont-tittle__tittle--origin");    
+        skills_marks.forEach(mark =>{
+            mark.classList.add("skills__cont-name--origin");
+        });
+        skills_tit_card.forEach(titc =>{
+            titc.classList.add("cont-text__tittle--origin");
+        });
+        skills_lines.forEach(line =>{
+            line.classList.add("cont-text__line--origin");
+        });
+
     }else if(color === "color2"){
 
+        skills_tittle.classList.add("cont-tittle__tittle--second");
+        skills_marks.forEach(mark =>{
+            mark.classList.add("skills__cont-name--second");
+        });
+        skills_tit_card.forEach(titc =>{
+            titc.classList.add("cont-text__tittle--second");
+        });
+        skills_lines.forEach(line =>{
+            line.classList.add("cont-text__line--second");
+        });
+
     }else if(color === "color3"){
-        
+
+        skills_tittle.classList.add("cont-tittle__tittle--third");
+        skills_marks.forEach(mark =>{
+            mark.classList.add("skills__cont-name--third");
+        });
+        skills_tit_card.forEach(titc =>{
+            titc.classList.add("cont-text__tittle--third");
+        });
+        skills_lines.forEach(line =>{
+            line.classList.add("cont-text__line--third");
+        });
+
     }else if(color === "color4"){
-        
+
+        skills_tittle.classList.add("cont-tittle__tittle--fourth");
+        skills_marks.forEach(mark =>{
+            mark.classList.add("skills__cont-name--fourth");
+        });
+        skills_tit_card.forEach(titc =>{
+            titc.classList.add("cont-text__tittle--fourth");
+        });
+        skills_lines.forEach(line =>{
+            line.classList.add("cont-text__line--fourth");
+        });
+
     }
-    
+
+}
+
+//Cambiar los colores de textos, botones, etc.. de la seccion portafolio
+const set_portf_style = (color) =>{
+
+    //titulo de la seccion
+    let port_tittle = document.getElementsByClassName("cont-tittle__tittlep")[0];
+    //botones
+    let port_btns = document.querySelectorAll(".project__linktop");
+
+    port_tittle.classList.remove("cont-tittle__tittlep--origin");
+    port_tittle.classList.remove("cont-tittle__tittlep--second");
+    port_tittle.classList.remove("cont-tittle__tittlep--third");
+    port_tittle.classList.remove("cont-tittle__tittlep--fourth");
+
+    port_btns.forEach(btn =>{
+        btn.classList.remove("project__linktop--origin");
+        btn.classList.remove("project__linktop--second");
+        btn.classList.remove("project__linktop--third");
+        btn.classList.remove("project__linktop--fourth");
+    });
+
+    if(color === "color1"){
+
+        port_tittle.classList.add("cont-tittle__tittlep--origin");
+        port_btns.forEach(btn =>{
+            btn.classList.add("project__linktop--origin");
+        });
+
+    }else if(color === "color2"){
+
+        port_tittle.classList.add("cont-tittle__tittlep--second");
+        port_btns.forEach(btn =>{
+            btn.classList.add("project__linktop--second");
+        });
+
+    }else if(color === "color3"){
+
+        port_tittle.classList.add("cont-tittle__tittlep--third");
+        port_btns.forEach(btn =>{
+            btn.classList.add("project__linktop--third");
+        });
+
+    }else if(color === "color4"){
+
+        port_tittle.classList.add("cont-tittle__tittlep--fourth");
+        port_btns.forEach(btn =>{
+            btn.classList.add("project__linktop--fourth");
+        });
+
+    }
+}
+
+//Cambiar los colores de textos, botones, etc.. de la seccion contacto
+const set_cnt_style = (color) =>{
+
+    //titulo de la seccion
+    let cnt_tittle = document.getElementsByClassName("cont-tittle__tittlec")[0];
+
+    cnt_tittle.classList.remove("cont-tittle__tittlec--origin");
+    cnt_tittle.classList.remove("cont-tittle__tittlec--second");
+    cnt_tittle.classList.remove("cont-tittle__tittlec--third");
+    cnt_tittle.classList.remove("cont-tittle__tittlec--fourth");
+
+
+    if(color === "color1"){
+
+        cnt_tittle.classList.add("cont-tittle__tittlec--origin");
+
+    }else if(color === "color2"){
+
+        cnt_tittle.classList.add("cont-tittle__tittlec--second");
+
+    }else if(color === "color3"){
+
+        cnt_tittle.classList.add("cont-tittle__tittlec--third");
+
+    }else if(color === "color4"){
+
+        cnt_tittle.classList.add("cont-tittle__tittlec--fourth");
+
+    }
 }
 
 //Cambiar los colores de textos, botones, etc.. en general
@@ -176,21 +338,29 @@ const set_style = (color) =>{
         set_menu_style("color1");
         set_home_style("color1");
         set_skills_style("color1");
+        set_portf_style("color1");
+        set_cnt_style("color1");
     }else if(color.id === "color2"){
         set_logo_style("color2");
         set_menu_style("color2");
         set_home_style("color2");
-        set_skills_style("color1");
+        set_skills_style("color2");
+        set_portf_style("color2");
+        set_cnt_style("color2");
     }else if(color.id === "color3"){
         set_logo_style("color3");
         set_menu_style("color3");
         set_home_style("color3");
-        set_skills_style("color1");
+        set_skills_style("color3");
+        set_portf_style("color3");
+        set_cnt_style("color3");
     }else if(color.id === "color4"){
         set_logo_style("color4");
         set_menu_style("color4");
         set_home_style("color4");
-        set_skills_style("color1");
+        set_skills_style("color4");
+        set_portf_style("color4");
+        set_cnt_style("color4");
     }
 }
 
