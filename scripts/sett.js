@@ -10,6 +10,8 @@ const show_settings = ()=>{
     panel.classList.toggle("settings-panel--show");
 };
 
+////////Funciones para modificar los colores de textos, botones, etc..
+
 //Cambiar el color del logo
 const set_logo_style = (color) => {
 
@@ -364,6 +366,9 @@ const set_style = (color) =>{
     }
 }
 
+////////Funciones para modificar el tema de la pagina
+
+//Cambiar los iconos del menu
 const set_icon_color = (skin_color) =>{
 
     //Logo home
@@ -417,20 +422,14 @@ const set_icon_color = (skin_color) =>{
 
 }
 
-//Cambiar el tema de la pagina Dark/Light
-const set_body = (skin_color) =>{
-    let body = document.getElementsByTagName("body")[0];
+//Cambiar tema del menu
+const set_menu_skin = (skin_color) =>{
+
     let menu = document.getElementsByClassName("menu")[0];
     let logo = document.getElementsByClassName("cont-logo__logo")[0];
     let links = document.querySelectorAll(".link__text");
-    let home = document.getElementsByClassName("home")[0];
-    let home_name = document.getElementsByClassName("cont-inf__name")[0];
-    let home_position = document.getElementsByClassName("cont-inf__position")[0];
 
     if(skin_color === "light"){
-
-        body.classList.remove("body--dark");
-        body.classList.add("body--light");
 
         menu.classList.remove("menu--dark");
         menu.classList.add("menu--light");
@@ -448,19 +447,7 @@ const set_body = (skin_color) =>{
 
         set_icon_color("light");
 
-        home.classList.remove("home--dark");
-        home.classList.add("home--light");
-
-        home_name.classList.remove("cont-inf__name--dark");
-        home_name.classList.add("cont-inf__name--light");
-
-        home_position.classList.remove("cont-inf__position--dark");
-        home_position.classList.add("cont-inf__position--light");
-
     }else if(skin_color === "dark"){
-
-        body.classList.remove("body--light");
-        body.classList.add("body--dark");
 
         menu.classList.remove("menu--light");
         menu.classList.add("menu--dark");
@@ -478,6 +465,29 @@ const set_body = (skin_color) =>{
 
         set_icon_color("dark");
 
+    }
+}
+
+//Cambiar tema de la seccion inicio
+const set_home_skin = (skin_color) =>{
+
+    let home = document.getElementsByClassName("home")[0];
+    let home_name = document.getElementsByClassName("cont-inf__name")[0];
+    let home_position = document.getElementsByClassName("cont-inf__position")[0];
+
+    if(skin_color === "light"){
+
+        home.classList.remove("home--dark");
+        home.classList.add("home--light");
+
+        home_name.classList.remove("cont-inf__name--dark");
+        home_name.classList.add("cont-inf__name--light");
+
+        home_position.classList.remove("cont-inf__position--dark");
+        home_position.classList.add("cont-inf__position--light");
+
+    }else if(skin_color === "dark"){
+
         home.classList.remove("home--light");
         home.classList.add("home--dark");
 
@@ -486,6 +496,194 @@ const set_body = (skin_color) =>{
 
         home_position.classList.remove("cont-inf__position--light");
         home_position.classList.add("cont-inf__position--dark");
+
+    }
+
+}
+
+//Cambiar tema de la seccion conocimientos
+const set_skills_skin = (skin_color) =>{
+
+    let skills = document.getElementsByClassName("skills")[0];
+    let skills_cards = document.querySelectorAll(".cont-skills__skills");
+    let list_item = document.querySelectorAll(".list__item");
+
+    if(skin_color === "light"){
+
+        skills.classList.remove("skills--dark");
+        skills.classList.add("skills--light");
+        
+        skills_cards.forEach(card => {
+            card.classList.remove("cont-skills__skills--dark");
+        });
+
+        skills_cards.forEach(card => {
+            card.classList.add("cont-skills__skills--light");
+        });
+
+        list_item.forEach(item => {
+            item.classList.remove("list__item--dark");
+        });
+
+        list_item.forEach(item => {
+            item.classList.add("list__item--light");
+        });
+
+    }else if(skin_color === "dark"){
+
+        skills.classList.remove("skills--light");
+        skills.classList.add("skills--dark");
+
+        skills_cards.forEach(card => {
+            card.classList.remove("cont-skills__skills--light");
+        });
+
+        skills_cards.forEach(card => {
+            card.classList.add("cont-skills__skills--dark");
+        });
+
+        list_item.forEach(item => {
+            item.classList.remove("list__item--light");
+        });
+
+        list_item.forEach(item => {
+            item.classList.add("list__item--dark");
+        });
+
+    }
+
+}
+
+//Cambiar tema de la seccion portafolio
+const set_port_skin = (skin_color) =>{
+    
+    let portfolio = document.getElementsByClassName("portfolio")[0];
+
+    if(skin_color === "light"){
+
+        portfolio.classList.remove("portfolio--dark");
+        portfolio.classList.add("portfolio--light");
+
+    }else if(skin_color === "dark"){
+
+        portfolio.classList.remove("portfolio--light");
+        portfolio.classList.add("portfolio--dark");
+
+    }
+
+}
+
+//Cambiar tema de la seccion contacto
+const set_cnt_skin = (skin_color) =>{
+
+    let cnt = document.getElementsByClassName("cnt")[0];
+    let cnt_item = document.querySelectorAll(".cont-cnt__cntitem");
+    let cnt_letras = document.querySelectorAll(".cntitem__cont-link");
+    let logo_phone = document.getElementById("logo_phone").children[0].children[0].children[0].children[0].attributes;
+    let logo_cel = document.getElementById("logo_cel").children[0].children[0].children[0].attributes;
+    let logo_mailup = document.getElementById("logo_mail").children[0].children[0].children[0].children[0].children[0].attributes;
+    let logo_maildown = document.getElementById("logo_mail").children[0].children[0].children[0].children[0].children[1].attributes;
+    let logo_git = document.getElementById("logo_git").children[0].children[0].children[0].children[0].attributes;
+    let logo_code = document.getElementById("logo_code").children[0].children[0].children[0].attributes;
+    let logo_in = document.getElementById("logo_in").children[0].children[0].attributes;
+    console.log(logo_in);
+
+    if(skin_color === "light"){
+
+        cnt.classList.remove("cnt--dark");
+        cnt.classList.add("cnt--light");
+
+        cnt_item.forEach(item => {
+            item.classList.remove("cont-cnt__cntitem--dark");
+        });
+
+        cnt_item.forEach(item => {
+            item.classList.add("cont-cnt__cntitem--light");
+        });
+
+        cnt_letras.forEach(letra => {
+            letra.classList.remove("cntitem__cont-link--dark");
+        });
+
+        cnt_letras.forEach(letra => {
+            letra.classList.add("cntitem__cont-link--light");
+        });
+
+        logo_phone.fill.value = "#000000";
+        logo_cel.fill.value = "#000000";
+        logo_mailup.fill.value = "#000000";
+        logo_maildown.fill.value = "#000000";
+        logo_git.fill.value = "#000000";
+        logo_code.fill.value = "#000000";
+        logo_in.fill.value = "#000000";
+
+    }else if(skin_color === "dark"){
+
+        cnt.classList.remove("cnt--light");
+        cnt.classList.add("cnt--dark");
+
+        cnt_item.forEach(item => {
+            item.classList.remove("cont-cnt__cntitem--light");
+        });
+
+        cnt_item.forEach(item => {
+            item.classList.add("cont-cnt__cntitem--dark");
+        });
+
+        cnt_letras.forEach(letra => {
+            letra.classList.remove("cntitem__cont-link--light");
+        });
+
+        cnt_letras.forEach(letra => {
+            letra.classList.add("cntitem__cont-link--dark");
+        });
+
+        logo_phone.fill.value = "#ffffff";
+        logo_cel.fill.value = "#ffffff";
+        logo_mailup.fill.value = "#ffffff";
+        logo_maildown.fill.value = "#ffffff";
+        logo_git.fill.value = "#ffffff";
+        logo_code.fill.value = "#ffffff";
+        logo_in.fill.value = "#ffffff";
+
+    }
+
+}
+
+//Cambiar el tema de la pagina Dark/Light
+const set_body = (skin_color) =>{
+    let body = document.getElementsByTagName("body")[0];
+
+
+    if(skin_color === "light"){
+
+        body.classList.remove("body--dark");
+        body.classList.add("body--light");
+
+        set_menu_skin("light");
+
+        set_home_skin("light");
+
+        set_skills_skin("light");
+
+        set_port_skin("light");
+
+        set_cnt_skin("light");
+
+    }else if(skin_color === "dark"){
+
+        body.classList.remove("body--light");
+        body.classList.add("body--dark");
+
+        set_menu_skin("dark");
+
+        set_home_skin("dark");
+
+        set_skills_skin("dark");
+
+        set_port_skin("dark");
+
+        set_cnt_skin("dark");
 
     }
 }

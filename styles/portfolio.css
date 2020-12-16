@@ -7,12 +7,19 @@
     right: -80vw;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: var(--color-body-light);
     transition: transform 0.3s ease;
 }
 
 .portfolio--show{
     transform: translate(-100%,0%);
+}
+
+.portfolio--light{
+    background-color: var(--color-body-light);
+}
+
+.portfolio--dark{
+    background-color: var(--color-body-dark);
 }
 
 .portfolio__cont-tittle{
