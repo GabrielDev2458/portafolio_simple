@@ -1,3 +1,5 @@
+let menu = document.getElementsByClassName("menu")[0];
+let menu_control = document.getElementsByClassName("menu-control")[0];
 let links = document.querySelectorAll(".link__text");
 let home = document.getElementsByClassName("home")[0];
 let skills = document.getElementsByClassName("skills")[0];
@@ -46,9 +48,25 @@ const set_view = (view)=> {
     }
 };
 
+const show_menu = (trigger) =>{
+    console.log("hola crack");
+    if(trigger === "lines"){
+        menu_control.classList.toggle("menu-control--active");
+        menu.classList.toggle("menu--show");
+        show_settings("lines");
+    }else if (trigger === "gear"){
+        menu_control.classList.remove("menu-control--active");
+        menu.classList.remove("menu--show");
+    }
+}
+
 links.forEach(link => {
     console.log();
     link.addEventListener("click",e =>{
         set_view(e.target.attributes.id.value);
     });
+});
+
+menu_control.addEventListener("click",e=>{
+    show_menu("lines");
 });

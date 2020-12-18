@@ -154,3 +154,69 @@
 .cont-portfolio__project:hover .project__linktop{
     transform: translate(0,0);
 }
+
+/*-------------------------------------Responsive--------------------------------------------*/
+
+/*Celulares*/
+@media only screen and (min-width: 250px) and (max-width: 630px){
+
+    .portfolio{
+        width: 100vw;
+        right: -100vw;
+        overflow: hidden;
+    }
+
+    .portfolio__cont-tittle{
+        width: 100%;
+        height: 16%;
+        justify-content: center;
+    }
+
+    .cont-tittle__tittlep{
+        font-size: 5.5vw;
+        margin-left: 0vw;
+    }
+
+    .portfolio__cont-portfolio{
+        width: 100%;
+        height: 84%;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .cont-portfolio__project{
+        width: 90%;
+        height: 40%;
+        margin: 5% 0 5% 5%;
+        border-radius: 10px;
+    }
+
+    .project__opacity-box{
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+    }
+
+    .cont-portfolio__project:hover .project__opacity-box{
+        opacity: 0.7;
+    }
+
+    .project__name{
+        font-size: 4.5vw;
+        top: 10%;
+        left: 7%;
+        transform: translate(0%,0%);
+        color: #ffffff;
+    }
+
+    .project__linktop{
+        bottom: 10%;
+        right: 7%;
+        padding: 2% 3%;
+        border-radius: 5px;
+        font-size: 3.2vw;
+        transform: translate(0%,0%);
+    }
+
+}

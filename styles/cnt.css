@@ -113,3 +113,50 @@
 .cntitem__cont-link--dark{
     color: var(--color-letra-dark);
 }
+
+/*-------------------------------------Responsive--------------------------------------------*/
+
+/*Celulares*/
+@media only screen and (min-width: 250px) and (max-width: 630px){
+
+    .cnt{
+        width: 100vw;
+        right: -100vw;
+        overflow: hidden;
+    }
+    
+    .cnt__cont-tittle{
+        width: 100%;
+        height: 16%;
+        justify-content: center;
+    }
+
+    .cont-tittle__tittlec{
+        font-size: 5.5vw;
+        margin-left: 0vw;
+    }
+
+    .cnt__cont-cnt{
+        width: 100%;
+        height: 84%;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 30% 30% 30% 30% 30%;
+        grid-gap: 5% 0%;
+        padding: 5% 4%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .cont-cnt__cntitem{
+        border-radius: 10px;
+    }
+
+    .cont-ico__circle{
+        width: 85px;
+        height: 85px;
+    }
+
+    .cntitem__cont-link > h4{
+        font-size: 4.2vw;
+    }
+}

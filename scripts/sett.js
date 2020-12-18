@@ -5,9 +5,15 @@ let butt_light = document.getElementsByClassName("skin__light")[0];
 let butt_dark = document.getElementsByClassName("skin__dark")[0];
 
 //mostrar el panel de control
-const show_settings = ()=>{
-    gear.classList.toggle("settings-gear--show");
-    panel.classList.toggle("settings-panel--show");
+const show_settings = (trigger)=>{
+    if(trigger === "gear"){
+        gear.classList.toggle("settings-gear--show");
+        panel.classList.toggle("settings-panel--show");
+        show_menu("gear");
+    }else if(trigger === "lines"){
+        gear.classList.remove("settings-gear--show");
+        panel.classList.remove("settings-panel--show");
+    }
 };
 
 ////////Funciones para modificar los colores de textos, botones, etc..
@@ -691,7 +697,7 @@ const set_body = (skin_color) =>{
 ////////Eventos que disparan las funciones
 
 gear.addEventListener("click", e => { 
-    show_settings();
+    show_settings("gear");
 });
 
 butt_light.addEventListener("click", e => {
