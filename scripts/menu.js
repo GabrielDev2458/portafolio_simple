@@ -5,6 +5,8 @@ let home = document.getElementsByClassName("home")[0];
 let skills = document.getElementsByClassName("skills")[0];
 let portfolio = document.getElementsByClassName("portfolio")[0];
 let cnt = document.getElementsByClassName("cnt")[0];
+let cnt_btn = document.getElementsByClassName("action__btn-cnt")[0];
+let port_btn = document.getElementsByClassName("action__btn-port")[0];
 
 const set_home_view = ()=> {
 
@@ -69,4 +71,12 @@ links.forEach(link => {
 
 menu_control.addEventListener("click",e=>{
     show_menu("lines");
+});
+
+cnt_btn.addEventListener("click", e =>{
+    set_view("cnt");
+});
+
+port_btn.addEventListener("click", e =>{
+    set_view("port");
 });
