@@ -7,7 +7,8 @@
     right: -80vw;
     overflow-x: hidden;
     overflow-y: scroll;
-    transition: transform 0.3s ease;
+    transition: transform 0.45s ease,
+                background-color 0.45s ease;
 }
 
 .cnt--show{
@@ -32,6 +33,7 @@
 
 .cont-tittle__tittlec{
     margin-left: 1.5vw;
+    transition: color 0.45s ease;
 }
 
 .cont-tittle__tittlec--origin{
