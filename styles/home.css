@@ -7,8 +7,8 @@
     right: -80vw;
     overflow-x: hidden;
     overflow-y: scroll;
-    transition: transform 0.3s ease,
-                background-color 0.3s ease;
+    transition: transform 0.45s ease,
+                background-color 0.45s ease;
 }
 
 .home--show{
@@ -55,6 +55,7 @@
 .cont-inf__name{
     font-size: 3.2vw;
     margin: 1vw 0;
+    transition: color 0.45s ease;
 }
 
 .cont-inf__name--light{
@@ -68,6 +69,7 @@
 .cont-inf__position{
     font-size: 2.2vw;
     margin: 1vw 0;
+    transition: color 0.45s ease;
 }
 
 .cont-inf__position--light{
@@ -76,6 +78,10 @@
 
 .cont-inf__position--dark{
     color: var(--color-letra-dark);
+}
+
+.position-resalt{
+    transition: color 0.45s ease;
 }
 
 .position-resalt--origin{
@@ -104,7 +110,7 @@
 
 .action__btn-cnt{
     width: 12%;
-    height: 29%;
+    height: 33%;
     border: none;
     border-radius: 10px;
     margin: 0 15px;
@@ -112,6 +118,7 @@
     color: #ffffff;
     font-size: 1vw;
     font-weight: bold;
+    transition: background-color 0.45s ease;
 }
 
 .action__btn-cnt--origin{
@@ -132,7 +139,7 @@
 
 .action__btn-port{
     width: 12%;
-    height: 29%;
+    height: 33%;
     border-radius: 10px;
     margin: 0 15px;
     cursor: pointer;
@@ -140,6 +147,7 @@
     font-size: 1vw;
     font-weight: bold;
     background-color: white;
+    transition: border 0.45s ease;
 }
 
 .action__btn-port--origin{

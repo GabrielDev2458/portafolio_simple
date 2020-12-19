@@ -7,7 +7,8 @@
     right: -80vw;
     overflow-x: hidden;
     overflow-y: scroll;
-    transition: transform 0.3s ease;
+    transition: transform 0.45s ease,
+                background-color 0.45s ease;
 }
 
 .skills--show{
@@ -32,6 +33,7 @@
 
 .cont-tittle__tittle{
     margin-left: 1.5vw;
+    transition: color 0.45s ease;
 }
 
 .cont-tittle__tittle--origin{
@@ -67,6 +69,7 @@
     -moz-box-shadow: 6px 6px 14px -11px rgba(0,0,0,0.75);
     position: relative;
     overflow: hidden;
+    transition: background-color 0.45s ease;
 }
 
 .cont-skills__skills--light{
@@ -103,6 +106,7 @@
     box-shadow: 6px 6px 14px -9px rgba(0,0,0,0.75);
     -webkit-box-shadow: 6px 6px 14px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 6px 14px -9px rgba(0,0,0,0.75);
+    transition: background-color 0.45s ease;
 }
 
 .skills__cont-name > h1{
@@ -134,6 +138,7 @@
 .cont-text__tittle{
     font-size: 1.3vw;
     margin: 2% 0;
+    transition: color 0.45s ease;
 }
 
 .cont-text__tittle--origin{
@@ -157,6 +162,7 @@
     height: 4px;
     border: none;
     border-radius: 15px;
+    transition: background-color 0.45s ease;
 }
 
 .cont-text__line--origin{
@@ -177,10 +183,12 @@
 
 .cont-text__list{
     font-size: 1vw;
+    list-style-type: none;
 }
 
 .list__item{
     margin: 2% 0;
+    transition: color 0.45s ease;
 }
 
 .list__item--light{
